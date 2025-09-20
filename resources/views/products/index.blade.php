@@ -10,7 +10,7 @@
     <a href="{{ route('products.create') }}">Criar novo produto</a>
     <ul>
         @foreach ($products as $product)
-            <li>{{ $product->name }}</li>
+            <li>{{ $product->name }} | <a href="{{ route('products.edit', $product->id) }}">editar</a></li>
         @endforeach
     </ul>
 </body>
