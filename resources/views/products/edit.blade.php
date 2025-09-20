@@ -6,7 +6,9 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="" method="POST">
+    <form action="{{ route('products.update', $product->id) }}" method="POST">
+        @csrf
+        @method('put')
         <label for="name">Product:</label>
         <input type="text" id="name" name="name" value="{{ $product->name }}">
         <input type="submit" value="Salvar">
