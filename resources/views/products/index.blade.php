@@ -10,7 +10,13 @@
     <a href="{{ route('products.create') }}">Criar novo produto</a>
     <ul>
         @foreach ($products as $product)
-            <li>{{ $product->name }} | <a href="{{ route('products.edit', $product->id) }}">editar</a></li>
+            <li>{{ $product->name }} | <a href="{{ route('products.edit', $product->id) }}">editar</a> 
+                <form action="{{ route('products.destroy', $product->id) }}" method="POST" style="display: inline;">
+                    @csrf
+                    @method('delete')
+                    <input type="submit" value="Deletar">
+                </form>
+            </li>
         @endforeach
     </ul>
 </body>
