@@ -20,12 +20,10 @@ class ProductController extends Controller
 
     public function store(Request $request)
     {
-        //
+        Product::create($request->all());
+        return redirect()->route('products.index');
     }
 
-    /**
-     * Display the specified resource.
-     */
     public function show(Product $product)
     {
         //

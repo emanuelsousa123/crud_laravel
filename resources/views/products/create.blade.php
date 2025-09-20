@@ -6,6 +6,11 @@
     <title>Document</title>
 </head>
 <body>
-    hello world
+    <form action="{{ route('products.store') }}" method="POST">
+        @csrf
+        <label for="product">Product:</label>
+        <input type="text" id="product" name="name" required>
+        <input type="submit" value="Enviar">
+    </form>
 </body>
 </html>
