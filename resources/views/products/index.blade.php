@@ -7,6 +7,7 @@
 </head>
 <body>
     <h1>Products</h1>
+    <a href="{{ route('products.create') }}">Criar novo produto</a>
     <ul>
         @foreach ($products as $product)
             <li>{{ $product->name }}</li>
