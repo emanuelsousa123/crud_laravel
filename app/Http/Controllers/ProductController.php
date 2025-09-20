@@ -9,13 +9,10 @@ class ProductController extends Controller
 {
     public function index()
     {
-        // $products = Product::all();
-        // return view('products.index', compact('products'));
+        $products = Product::all();
+        return view('products.index', compact('products'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
     public function create()
     {
         //
